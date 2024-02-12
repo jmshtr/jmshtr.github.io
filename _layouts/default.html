@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if page.title %}
+        <meta name="description" content="{{ page.content | truncate: 160 | strip_html | strip_newlines }}">
+        {% endif %}
+        {% if page.tags %}
+        <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}">
+        {% endif %}
+        {% if page.title or page.title == 'me' %}
+        <title>{{ site.url }}{{ page.url }}</title>
+        {% else %}
+        <title>Index of {{ site.name }}{{ page.url }}</title>
+        {% endif %}
+        <a rel="me" href="https://mastodon.social/@jmshtr"></a>
+        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/atom-one-light.css">
+        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/global.css">
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/assets/img/favicon.png"/>
+    </head>
+    <body>
+        {{ content }}
+        <hr class="line">
+        <div class="footer">
+            <p>{{ site.url }}{{ page.url }}; Created by <a href="http://github.com/jmshtr" target="_blank">James Hunter</a>; Code licensed under <a href="https://github.com/jmshtr/jmshtr.github.io/blob/master/LICENSE" target="_blank">GNU GPLv3 License</a></p>
+        </div>
+    </body>
+</html>
