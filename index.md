@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="header">
-	<h1>Index of {{ site.name }}{{ page.url }}</h1>
+	<h1>Index of jmshtr{{ page.url }}</h1>
 	{% include header.html %}
 </div>
 <hr class="line">
