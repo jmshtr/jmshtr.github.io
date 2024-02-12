@@ -26,4 +26,4 @@ layout: default
 	{% endfor %}
 	</table>
 </div>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/tableOperations.js"></script>
+<script src="/assets/js/tableOperations.js"></script>
