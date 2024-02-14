@@ -1,9 +1,12 @@
-# frozen_string_literal: true
+source 'https://rubygems.org'
 
-source "https://rubygems.org"
+gem 'jekyll'
+gem 'jekyll-last-modified-at'
+gem 'kramdown-parser-gfm'
+gem 'tzinfo-data'
 
-gem "webrick"
-gem "kramdown-parser-gfm"
+# windows specific
 gem 'wdm', '>= 0.1.0'
 
-gemspec
+# update ruby version
+gem 'webrick'

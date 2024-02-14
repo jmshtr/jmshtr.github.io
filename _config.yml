@@ -1,26 +1,36 @@
+lang: en-GB
+timezone:  Europe/London
+repo: https://github.com/jmshtr/jmshtr.github.io # site repo
 permalink: /:year:month:day/:title
-url: https://jsmhtr.github.io
-lang: en
-baseurl: # blank on purpose
-repo: https://github.com/jmshtr/jmshtr.github.io
+version: "1.2.1"
+
+# URL settings
+url: "https://jmshtr.github.io" # Domain Name of host. [username].github.io for github pages
+baseurl: "" # sub folder for jekyll site. only if jekyll site is not in the root of the host
+permalink: pretty
 
 author:
   name: jmshtr
   description: personal website
-  google_verification: null
 
-# File management
-include: [".htaccess"]
-exclude: ["README.md", "LICENSE"]
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Sass
+exclude:
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
 sass:
   style: :compressed
   sass_dir: _sass
 
-# Markdown
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable : true
+plugins:
+  - jekyll-last-modified-at

@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/atom-one-light.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+
+    <title>
+        {% if page.title or page.title == 'me' %}
+            {{ site.url }}{{ page.url }}
+        {% else %}
+            Index of jmshtr{{ page.url }}
+        {% endif %}
+    </title>
+</head>

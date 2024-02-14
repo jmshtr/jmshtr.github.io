@@ -1,30 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% if page.title %}
-        <meta name="description" content="{{ page.content | truncate: 160 | strip_html | strip_newlines }}">
-        {% endif %}
-        {% if page.tags %}
-        <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}">
-        {% endif %}
-        {% if page.title or page.title == 'me' %}
-        <title>{{ site.url }}{{ page.url }}</title>
-        {% else %}
-        <title>Index of jmshtr{{ page.url }}</title>
-        {% endif %}
-        <a rel="me" href="https://mastodon.social/@jmshtr"></a>
-        <link rel="stylesheet" href="/assets/css/atom-one-light.css">
-        <link rel="stylesheet" href="/assets/css/global.css">
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png"/>
-    </head>
+<head>{% include head.html %}</head>
+
     <body>
         {{ content }}
         <hr class="line">
         <div class="footer">
-            <p>jmshtr/1.2.0 ({{ site.time | date: '%Y-%m-%d' }}) Server at {{ site.url }}</p>
+            <p>jmshtr/{{site.version}} ({{ site.time | date: '%Y-%m-%d' }}) Server at {{ site.url }}</p>
         </div>
     </body>
 </html>
